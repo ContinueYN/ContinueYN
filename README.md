@@ -1,7 +1,6 @@
- -2,69 +2,67 @@
 ### 余诺 · YN
 [continueyn.site](https://www.continueyn.site) · [GitHub](https://github.com/ContinueYN) · [Repositories](https://github.com/ContinueYN?tab=repositories)
-</div>
+
 ---
 ## 概览
 面向 LLM 应用的全栈交付，覆盖接入层、编排层、数据层与可观测链路。前端以 Vue 承担复杂交互，AI 侧覆盖检索增强、工具调用与多 Agent 编排。
@@ -40,6 +39,3 @@
 - 智能体工程：MCP Server 与 Agent Skills 的复用与权限收敛
 - 成本与时延：缓存命中率、上下文裁剪、批量推理与降级路径
 ---
-<div align="center">
-<sub>承因果 · 尽人事 · 顺天命</sub>
-</div>
