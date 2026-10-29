@@ -1,52 +1,45 @@
-# 余诺 · YN
-> 用 AI、自动化与全栈工程，把真实问题做成能用的产品。
-> Building practical products with AI, automation, and full-stack engineering.
-我是一名持续做项目的开发者，主要关注：
-- AI 应用与智能体：把模型能力接进真实流程，而不是停在 Demo
-- 全栈 Web 与前端体验：Vue / TypeScript / Three.js，动效与交互优先
-- 算法与策略系统：博弈树、MCTS、评估函数与可视化
-- 把个人需求打磨成可复现、可维护的工程
-I build practical software around AI products, automation, and full-stack prototypes — from the first working demo to a more reliable product.
-🌐 个人站点：<https://www.continueyn.site>
-![Vue](https://img.shields.io/badge/Vue-3-42b883?logo=vuedotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776ab?logo=python&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00add8?logo=go&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ed8b00?logo=openjdk&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
+ -2,69 +2,67 @@
+### 余诺 · YN
+[continueyn.site](https://www.continueyn.site) · [GitHub](https://github.com/ContinueYN) · [Repositories](https://github.com/ContinueYN?tab=repositories)
+</div>
 ---
-## 精选作品 · Selected work
-下面按「产品完整度与代表性」排列。每个项目只保留一个清晰入口，方便快速了解。
-### 01 · Portfolio Website
-**个人作品集与博客 · Vue 3 + TypeScript + Three.js**
-从零设计的个人站点：滚动叙事首页、生成艺术背景、WebGPU 开场碎片球转场、页脚驻留可拖拽的 VRM 3D 角色，深浅双主题实时切换。纯静态架构，push 即由 GitHub Actions 构建发布。
-- 在线体验：<https://www.continueyn.site>
-- 项目源码：<https://github.com/ContinueYN/Website>
-### 02 · GomokuMind
-**五子棋策略评估与辅助系统 · Go + Python + React**
-把「这一步该下哪」拆成可对比的实验：Heuristic、Minimax、Alpha-Beta、MCTS、AlphaZero 式五种策略同台，配合评估函数可视化与对局复盘。
-- 项目源码：<https://github.com/ContinueYN/GomokuMind>
-### 03 · SynapseMind
-**基于神经可塑性与 CHC 七维的学习引导 · Python**
-单题诊断式学习工具：交一道不会的题，用 2–6 轮追问定位「最早断掉的那一步认知动作」，输出带证据的卡点卡与下一步训练建议。
-- 项目源码：<https://github.com/ContinueYN/SynapseMind>
-### 04 · dsh-vscode
-**DeepSeek Harness 的 VS Code 插件 · JavaScript**
-把编码智能体接进编辑器：会话、工具调用与文件改动的可视化，减少在终端与编辑器之间来回切换的摩擦。
-- 项目源码：<https://github.com/ContinueYN/dsh-vscode>
-### 05 · Poem · 诗之古河
-**传统文化与 3D 前端的融合 · Three.js**
-用三维渲染把书法与诗词做成可漫游的数字诗境：唐风卷轴、绢本册页、竹简多种装帧切换，配合粒子与光影营造古意。
-- 项目源码：<https://github.com/ContinueYN/Poem>
-### 06 · ChatRegistry-AI
-**全栈 AI 聊天与用户管理系统 · Vue 3 + FastAPI + GLM-4**
-前后端分离的双服务架构，支持注册登录、多轮会话管理、流式对话、思维链推理与 Markdown 渲染。
-- 项目源码：<https://github.com/ContinueYN/ChatRegistry-AI>
+## 概览
+面向 LLM 应用的全栈交付，覆盖接入层、编排层、数据层与可观测链路。前端以 Vue 承担复杂交互，AI 侧覆盖检索增强、工具调用与多 Agent 编排。
+关注三类指标：检索质量（召回率、重排效果、上下文预算）、推理时延（TTFT、输出吞吐）、失败路径的可恢复性（超时、降级、幂等重试）。
+## 能力域
+| 域 | 交付物 | 核心问题 |
+| :-- | :-- | :-- |
+| **LLM 应用** | 企业级智能体：RAG 知识库、工具调用、MCP、多 Agent 协作 | 召回精度、上下文预算、工具幂等与超时降级 |
+| **服务端** | 单体到微服务拆分与治理，缓存分层、分布式锁、分库分表 | 缓存击穿与雪崩、热点行、慢查询、一致性边界 |
+| **前端** | WebGPU / Three.js 实时渲染、滚动叙事、3D 角色交互 | 帧预算、GC 压力、上下文丢失恢复、降级策略 |
+| **交付与可观测** | 容器化、反向代理、全链路追踪与告警 | p99 时延、错误预算、SLO、灰度与回滚 |
+## 项目
+- **[Portfolio Website](https://github.com/ContinueYN/Website)**：个人站点，WebGPU 渲染与滚动叙事（[在线](https://www.continueyn.site)）
+  - 80 块碎面经 `BatchedMesh` 合批为单次绘制，噪声缩放在拼合相位收敛至 1；TSL 节点材质做菲涅尔边缘光，后处理以 Sobel 深度描边叠 Bayer 抖动抑制暗部色带。
+- **[GomokuMind](https://github.com/ContinueYN/GomokuMind)**：五子棋策略评估与辅助决策
+  - 启发式评估、Minimax、Alpha-Beta 剪枝、MCTS、AlphaZero 式策略并行基线，搜索树与评估函数可视化。
+- **[SynapseMind](https://github.com/ContinueYN/SynapseMind)**：单题诊断式学习引导
+  - 以 2–6 轮追问收敛至最早失效的认知动作，基于神经可塑性与 CHC 七维模型做归因，产出带证据链的卡点报告。
+- **[ChatRegistry-AI](https://github.com/ContinueYN/ChatRegistry-AI)**：全栈对话系统
+  - FastAPI 双服务拆分，SSE 流式输出、多轮上下文管理、思维链与 Markdown 增量渲染，GLM-4 函数调用。
+- **[dsh-vscode](https://github.com/ContinueYN/dsh-vscode)**：编码智能体的编辑器侧接入
+  - 会话生命周期、工具调用与文件差异的可视化，降低终端与编辑器之间的上下文切换成本。
+- **[Poem](https://github.com/ContinueYN/Poem)**：三维诗词展示
+  - Three.js 渲染管线与装帧状态机，卷轴、册页、竹简多形态切换，粒子与光影分层叠加。
+## 技术栈
+`Java` `Python` `Go` `TypeScript` `Vue 3`
+`Spring Cloud` `MySQL` `Redis` `Caffeine` `PGvector` `Docker` `Nginx`
+`Spring AI` `LangChain4j` `MCP` `Prometheus` `Grafana` `ARMS`
+## 工程实践
+- **规格驱动**：需求固化为可验证约束（Spec-Kit / OpenSpec），评审对象从实现细节前移到边界条件与失败路径。
+- **评测闭环**：固定 golden set 做回归，提示词与检索参数变更先离线评测再进主干。
+- **可复现 harness**：模型、工具、上下文与评测同环境运行，换模型即换基线，结论可比较。
+- **可观测**：trace / span 覆盖检索、工具调用与生成三段，故障定位到单次请求级别。
+## 方向
+- 检索链路：混合召回与重排策略，向量库与业务库的一致性边界
+- 智能体工程：MCP Server 与 Agent Skills 的复用与权限收敛
+- 成本与时延：缓存命中率、上下文裁剪、批量推理与降级路径
 ---
-## 其他在做的
-- [MyWebsite](https://github.com/ContinueYN/MyWebsite) — 前后端分离全栈版作品集：Vue 3 + Go + PostgreSQL
-- [Literature](https://github.com/ContinueYN/Literature) — 纯前端现代文学内容软件
-- [PetBattleGame](https://github.com/ContinueYN/PetBattleGame) — Java Swing 回合制宠物对战：五段剧情、本地双人、19 只宠物
-- [STU-auto-auth](https://github.com/ContinueYN/STU-auto-auth) — 校园网络自动验证工具
----
-<sub>页面内容与项目版权归作者所有 · © 余诺</sub>
+<div align="center">
+<sub>承因果 · 尽人事 · 顺天命</sub>
+</div>
